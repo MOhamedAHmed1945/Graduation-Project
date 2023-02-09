@@ -49,8 +49,8 @@ class ShoppingCartScreen extends StatelessWidget {
                   itemCount: 10,
                   itemBuilder: (context, index) {
                     return ItemShoppingCart(
-                      image: 'assets/images/medicine.png',
-                      name: 'Canister',
+                      image: 'assets/images/Emetrex.jpg',
+                      name: 'Emetrex',
                       price: '10.00',
                       totalPrice: '10.00',
                     );
