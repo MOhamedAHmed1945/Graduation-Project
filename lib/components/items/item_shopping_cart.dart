@@ -27,15 +27,17 @@ class ItemShoppingCart extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           color: Colors.blueGrey[100],
         ),
-        height: MediaQuery.of(context).size.height / 5,
+        height: MediaQuery.of(context).size.height / 5.5,
         child: Row(
           children: [
             Container(
-              height: 90,
+             height: 112,//90
               padding: EdgeInsets.only(
-                left: 7.5,
+                left: 8
               ),
-              child: Image.asset(image),
+              child: Image.asset(
+                image,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(
@@ -107,9 +109,11 @@ class ItemShoppingCart extends StatelessWidget {
                 ],
               ),
             ),
+            /*
             Spacer(
               flex: 1,
             ),
+             */
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
