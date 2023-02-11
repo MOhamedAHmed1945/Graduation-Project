@@ -10,8 +10,26 @@ class ReportsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 2.0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.lightBlue[900]!,
+            size: 30.0,
+          ),
+        ),
         title: Text(
           'Reports',
+          style: TextStyle(
+            color: Colors.lightBlue[900]!,
+            fontWeight: FontWeight.bold,
+            fontSize: MediaQuery.of(context).size.width / 12.5,
+          ),
+
         ),
       ),
       body: Padding(

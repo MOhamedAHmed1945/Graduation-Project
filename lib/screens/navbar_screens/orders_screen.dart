@@ -19,19 +19,19 @@ static String ordersScreenRoute = 'orders screen';
             fontSize: MediaQuery.of(context).size.width / 12.5,
           ),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pushNamedAndRemoveUntil(
-                  context, HomeScreen.homeScreenRoute, (route) => false);
-            },
-            icon: Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.lightBlue[900]!,
-              size: 30.0,
-            ),
+
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+                context, HomeScreen.homeScreenRoute, (route) => false);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.lightBlue[900]!,
+            size: 30.0,
           ),
-        ],
+        ),
+
       ),
       body: Center(
         child: Text(
