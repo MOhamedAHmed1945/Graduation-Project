@@ -7,8 +7,6 @@ import '../../components/items/item_shopping_cart.dart';
 class ShoppingCartScreen extends StatelessWidget {
   const ShoppingCartScreen({Key? key}) : super(key: key);
   static const String shoppingCartRoute = 'shopping cart';
-
-  // mohamed
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

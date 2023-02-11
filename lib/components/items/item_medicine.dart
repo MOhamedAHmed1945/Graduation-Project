@@ -9,10 +9,8 @@ class ItemMedicine extends StatelessWidget {
     required this.price,
     required this.available,
   });
-
   String image;
   String name;
-
   // ممكن تتغير تبقا double
   String price;
   String available;
