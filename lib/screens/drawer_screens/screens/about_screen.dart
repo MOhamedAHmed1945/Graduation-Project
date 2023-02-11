@@ -10,6 +10,7 @@ class AboutScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(10.0),
+        /*
         child: ListView(
           children: [
             Developer(
@@ -30,7 +31,7 @@ class AboutScreen extends StatelessWidget {
             Developer(
               image: 'assets/images/developers/mohand.jpg',
               name: 'Mohand Mohamed',
-              jopName: 'Database Developer',
+              jopName: 'Back-End Developer',
             ),
             Developer(
               image: 'assets/images/developers/sabry.jpg',
@@ -59,6 +60,7 @@ class AboutScreen extends StatelessWidget {
             ),
           ],
         ),
+        */
       ),
     );
   }
