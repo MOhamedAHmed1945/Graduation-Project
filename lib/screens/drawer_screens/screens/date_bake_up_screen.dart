@@ -18,39 +18,13 @@ class DateBakeUpScreen extends StatelessWidget {
                   SizedBox(
                     height: 15.0,
                   ),
-                  Row(
-                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: (){
-                              Navigator.pop(context);
-                            },
-                            icon: Icon(Icons.arrow_back_ios_new_outlined,),
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll<Color>(Colors.lightBlue),
-                            ),
-                          ),
-                          Text(
-                            'Back',
-                            style:TextStyle(
-                              color: Colors.lightBlue[900]!,
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        'Data Backup',
-                        style: TextStyle(
-                          color: Colors.lightBlue[900]!,
-                          fontSize: 35.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+                  Text(
+                    'Data Backup',
+                    style: TextStyle(
+                      color: Colors.lightBlue[900]!,
+                      fontSize: 35.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   SizedBox(
                     height: 10.0,
@@ -79,14 +53,97 @@ class DateBakeUpScreen extends StatelessWidget {
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 20.0,
+                              bottom: 10.0
+                            ),
+                            child: Container(
+                              width: 145, //135
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    offset: Offset(0, 5),
+                                    color: Colors.grey,
+                                    blurRadius: 3.0,
+                                  ),
+                                ],
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  colors: [
+                                    Colors.green,
+                                    Colors.green.shade900,
+                                  ],
+                                ),
+                              ),
+                              child: TextButton(
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 10.0),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        'Recovery',
+                                        style: const TextStyle(
+                                          fontSize: 20.0,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Icon(
+                                        Icons.cloud_sync_outlined,
+                                        color: Colors.white,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: 5.0
+                            ),
+                            child: Row(
+                              children: [
+                                IconButton(
+                                  onPressed: (){
+                                    Navigator.pop(context);
+                                  },
+                                  icon: Icon(Icons.arrow_back_ios_new_outlined,),
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll<Color>(Colors.lightBlue),
+                                  ),
+                                ),
+                                Text(
+                                  'Back',
+                                  style:TextStyle(
+                                    color: Colors.lightBlue[900]!,
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 40.0,
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(
-                          left: 20.0
+                          top: 0.0,
                         ),
                         child: Container(
-                          width: 145, //135
+                          width: 127.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10.0),
                             boxShadow: const [
@@ -99,8 +156,8 @@ class DateBakeUpScreen extends StatelessWidget {
                             gradient: LinearGradient(
                               begin: Alignment.bottomRight,
                               colors: [
-                                Colors.green,
-                                Colors.green.shade900,
+                                Colors.blue,
+                                Colors.blue.shade900,
                               ],
                             ),
                           ),
@@ -111,7 +168,7 @@ class DateBakeUpScreen extends StatelessWidget {
                               child: Row(
                                 children: [
                                   Text(
-                                    'Recovery',
+                                    'Upload',
                                     style: const TextStyle(
                                       fontSize: 20.0,
                                       color: Colors.white,
@@ -120,7 +177,7 @@ class DateBakeUpScreen extends StatelessWidget {
                                   ),
                                   Spacer(),
                                   Icon(
-                                    Icons.cloud_sync_outlined,
+                                    Icons.cloud_upload_outlined,
                                     color: Colors.white,
                                   ),
                                 ],
@@ -129,52 +186,7 @@ class DateBakeUpScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 40.0,
-                      ),
-                      Container(
-                        width: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          boxShadow: const [
-                            BoxShadow(
-                              offset: Offset(0, 5),
-                              color: Colors.grey,
-                              blurRadius: 3.0,
-                            ),
-                          ],
-                          gradient: LinearGradient(
-                            begin: Alignment.bottomRight,
-                            colors: [
-                              Colors.blue,
-                              Colors.blue.shade900,
-                            ],
-                          ),
-                        ),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Upload',
-                                  style: const TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Spacer(),
-                                Icon(
-                                  Icons.cloud_upload_outlined,
-                                  color: Colors.white,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+
                     ],
                   ),
                 ],
@@ -186,32 +198,3 @@ class DateBakeUpScreen extends StatelessWidget {
     );
   }
 }
-
-/*
-Container(
-                padding: EdgeInsets.only(
-                  top: 25.0,
-                ),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: (){
-                        Navigator.pop(context);
-                      },
-                      icon: Icon(Icons.arrow_back_ios_new_outlined,),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll<Color>(Colors.lightBlue),
-                      ),
-                    ),
-                    Text(
-                      'Back',
-                      style:TextStyle(
-                        color: Colors.lightBlue[900]!,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
- */
